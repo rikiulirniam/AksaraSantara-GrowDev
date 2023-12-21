@@ -1,0 +1,899 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  scroll-behavior: smooth;
+  color: white;
+  font-family: Alexandria;
+  font-weight: 800;
+}
+body {
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.background {
+  background: linear-gradient(
+    to bottom,
+    rgb(5, 150, 218),
+    rgba(9, 156, 224, 0.724),
+    rgba(11, 156, 223, 0.653),
+    rgb(158, 221, 251)
+  );
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.main {
+  position: relative;
+  height: 200vh;
+  max-width: 100%;
+  width: 100%;
+}
+nav.navbar-default {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 1.5em 2em;
+  line-height: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-default ul {
+  display: flex;
+  list-style-type: none;
+}
+.navbar-default > ul > li > a {
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+.imgNavbar {
+  width: 10%;
+}
+
+.text-home-indo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 12em;
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  transition: 300ms ease-in-out;
+}
+
+.t-indonesia,
+.t-kebudayaan {
+  transition: all 1s ease-out;
+}
+.t-kebudayaan {
+  font-size: 5em;
+  padding-inline: 2.5em;
+}
+.t-indonesia {
+  font-size: 22.5em;
+  padding: 0 0 0.3em 0.3em;
+  border-bottom: transparent solid 0.05em;
+}
+.sc-d {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  align-items: center;
+}
+.sc-d i {
+  font-size: 1em;
+}
+main {
+  height: 130vh;
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+}
+.pura {
+  z-index: 20;
+  width: 100%;
+  position: absolute;
+  top: -100vh;
+}
+
+span {
+  font-weight: 1200;
+  font-size: 25px;
+  rotate: 90deg;
+}
+
+.hero-wrapper {
+  height: 100vh;
+}
+
+.hero {
+  top: 0;
+  position: sticky;
+}
+
+.blender {
+  top: 16.5vh;
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  opacity: 1;
+  background: #000000;
+}
+
+.daerah-wrapper {
+  top: 16.5vh;
+  position: relative;
+  width: 100%;
+  height: 1100vh;
+  opacity: 1;
+  background: #000000;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  /* padding-inline: 10em; */
+}
+
+.wrapper {
+  position: sticky;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
+
+.wrapperFrame {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  transition: all 800ms ease;
+  border: 2px white solid;
+  width: 60%;
+  /* height: 200px; */
+}
+
+/* .gradient-overlay{
+  position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8));
+} */
+
+.transition {
+  position: relative;
+  bottom: 0;
+  z-index: 10;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 21%,
+    rgba(0, 0, 0, 1) 53%,
+    rgba(0, 0, 0, 0.7008928571428572) 70%,
+    rgba(24, 24, 24, 0.5020133053221288) 85%,
+    rgba(181, 181, 181, 0) 100%
+  );
+  height: 100px;
+  width: 100%;
+}
+
+.transitionDaerah {
+  position: relative;
+  z-index: 10px;
+  top: -11px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.7008928571428572) 51%,
+    rgba(24, 24, 24, 0.5020133053221288) 66%,
+    rgba(181, 181, 181, 0) 85%
+  );
+  height: 100px;
+  width: 100%;
+}
+
+.transitionFooter {
+  position: relative;
+  z-index: 10px;
+  top: 90px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.7008928571428572) 51%,
+    rgba(24, 24, 24, 0.5020133053221288) 66%,
+    rgba(181, 181, 181, 0) 85%
+  );
+  height: 100px;
+  width: 100%;
+}
+
+.transition1 {
+  position: relative;
+  top: 0px;
+  z-index: 10;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.7008928571428572) 51%,
+    rgba(24, 24, 24, 0.5020133053221288) 66%,
+    rgba(181, 181, 181, 0) 85%
+  );
+  height: 100px;
+  width: 100%;
+}
+
+.space {
+  height: 100px;
+  width: 100%;
+  background-color: #000000;
+}
+
+.gradient-overlay4 {
+  position: absolute;
+  top: 10;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+
+.section1 > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  /* height: 320px; */
+  /* width: 40em; */
+  /* transition: all 800ms ease; */
+  /* height: 100%; */
+  /* border: 2px white solid; */
+}
+
+.detailDaerah {
+  transition: all 800ms ease-in-out;
+  display: none;
+}
+
+/* .detailDaerahDiy{
+  display: none;
+} */
+
+.section1 {
+  transition: all 800ms ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(asset/D.I.Yogyakarta/PakaianAdat/candiRatuBoko.jpg);
+  background-size: cover;
+}
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(asset/indonesia/joglo.png);
+  background-size: cover;
+}
+
+.section4 {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(asset/JawaTengah/MakananDaerah/joglo.jpg);
+  /* filter: brightness(70%); */
+  background-size: cover;
+}
+
+.section5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 130vh;
+  background-image: url(asset/JawaTengah/Landmark/borobudur.jpg);
+  background-size: cover;
+}
+
+.title {
+  /* font-family: 'Alegreya Sans', sans-serif; */
+  z-index: 3;
+  height: 630px;
+  font-size: 180px;
+}
+
+.textContent2 {
+  z-index: 1;
+  margin-right: 50px;
+}
+
+.titleTarian {
+  color: white;
+  text-align: end;
+  font-size: 70px;
+  /* font-family: 'Cinzel', serif; */
+}
+
+.mainContent {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#imgSection {
+  width: 25%;
+  z-index: 1;
+}
+
+.textContent {
+  z-index: 1;
+  margin-left: 102px;
+}
+
+#titleContent {
+  font-size: 80px;
+}
+
+#desc {
+  text-align: justify;
+  width: 700px;
+  font-weight: 200;
+  font-size: 20px;
+  color: white;
+}
+
+.daerah {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  /* border: greenyellow 1px solid; */
+  /* padding-inline: 2em; */
+  position: sticky;
+  top: 0;
+}
+.daerah:nth-child(1) {
+  display: flex;
+}
+
+.next {
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #1d1d1d;
+  cursor: pointer;
+  /* font-family: 'Roboto Slab', serif; */
+  position: absolute;
+  top: 50%;
+  z-index: 15;
+  left: 0;
+  font-size: 15px;
+  margin-left: 5%;
+}
+
+.prev {
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #1d1d1d;
+  cursor: pointer;
+  /* font-family: 'Roboto Slab', serif; */
+  position: absolute;
+  top: 50%;
+  z-index: 15;
+  right: 0;
+  margin-right: 5%;
+  font-size: 15px;
+}
+
+/* .frame{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  transition: all 800ms ease;
+} */
+
+/* #jateng{
+  display: flex;
+}
+ */
+#diy {
+  display: none;
+}
+
+.img-daerah {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 60%; */
+  max-height: 90%;
+  overflow: hidden;
+  transition: all 800ms ease;
+  position: relative;
+  /* backdrop-filter: blur(20px); */
+  /* border: 5px solid whitesmoke; */
+  /* top: 25%; */
+  /* transform: translateY(-25%); */
+  /* top: 0;
+    left: 0; */
+}
+.img-daerah > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.parent-text-daerah {
+  /* transition: all 800ms ease; */
+  /* transform: translateX(-300px); */
+  height: 13em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+}
+.parent-text-daerah > .text-daerah {
+  max-width: 60%;
+  text-align: center;
+  /* font-family: 'Roboto Slab', serif; */
+  font-weight: 400;
+}
+.title-text-daerah {
+  /* text-align: center;
+  */
+  /* font-family: 'Roboto Slab', serif; */
+  position: relative;
+  top: 0;
+  z-index: 1;
+  font-size: 4em;
+  padding: 0.3em 0;
+  transition: all 400ms ease-out;
+}
+
+#daerah2 {
+  display: none;
+}
+
+/* .footer{
+  bottom: 0;
+  position: relative;
+  display: block;
+  z-index: 0;
+  height: 20vh;
+  background-color: black;
+} */
+
+.button {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+/* .detail-daerah {
+  display: none;
+  min-height: 100vh;
+} */
+
+footer.footer {
+  height: 120vh;
+  width: 100%;
+  background-color: #474747;
+  overflow: hidden;
+  /* font-family: 'Lora', serif; */
+  /* border: greenyellow 1px solid; */
+}
+.wrapperMainFooter {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainfooter {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: greenyellow 1px solid; */
+}
+
+.Comment,
+.contactUs {
+  height: 80%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Comment {
+  /* width: 25%; */
+  padding: 1em;
+}
+.Comment h1 {
+  padding: 1em;
+}
+.Comment form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+}
+.Comment form p {
+  padding: 1em 1em 0.4em 1em;
+}
+.Comment form input {
+  font-weight: 300;
+  border-radius: 5px;
+  padding-inline: 1em;
+  width: 60%;
+  height: 2.5em;
+  color: black;
+}
+
+.Comment form textarea {
+  width: 100%;
+  height: 15em;
+  max-height: 15em;
+  max-width: 100%;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-weight: 300;
+  color: black;
+}
+.Comment form button[type="submit"] {
+  background: rgb(15, 170, 231);
+  padding: 1em 2em;
+  margin: 1em;
+  border-radius: 5px;
+  align-self: end;
+}
+
+.contactUs {
+  padding: 1em;
+}
+.contact-list h1,
+.sosmed-list h1 {
+  padding: 0.8em 1em 0.3em 1em;
+}
+
+.hubKami {
+  list-style: none;
+  line-height: 2.5em;
+  font-weight: 300;
+  padding: 1em 1.5em 1em 1.5em;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.hubKami li:nth-child(1) {
+  line-height: 1.2em;
+}
+
+.sosmed {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  /* background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px; */
+}
+.btnSosmed {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  /* width: 50%; */
+}
+.btnSosmed a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.btnSosmed a:hover {
+  text-decoration: underline;
+}
+.btnSosmed a img {
+  padding: 0.5em;
+  height: 3em;
+  width: 3em;
+}
+.btnSosmed p {
+  font-size: 1em;
+  margin-inline: 1em;
+}
+.bottom-footer {
+  position: relative;
+  bottom: 0;
+}
+.aksaraSantara {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 4em;
+  height: 3.5em; */
+  width: 100%;
+  height: 5em;
+  bottom: 3.5em;
+  object-fit: contain;
+  padding-inline: 3em;
+  /* transform: translate(0, -50%); */
+}
+
+.logoAksara {
+  width: 10%;
+  height: 75%;
+}
+
+@media only screen and (max-width: 767px) {
+  .main {
+    height: 150vh;
+  }
+
+  .imgNavbar {
+    width: 35%;
+  }
+
+  .text-home-indo {
+    transition: 100ms ease-in-out;
+    /* margin-top: 3%; */
+    line-height: 5em;
+  }
+
+  .t-indonesia {
+    font-size: 9em;
+    transition: all 1.5s ease-out;
+  }
+
+  .t-kebudayaan {
+    margin-top: 15%;
+    font-size: 2em;
+  }
+
+  .pura {
+    top: -10vh;
+  }
+
+  /*   .blender{
+    height: 40vh;
+  } */
+
+  .title-text-daerah {
+    font-size: 2em;
+    transition: all 1s ease;
+    /* margin-top: 10%; */
+  }
+
+  .daerah-wrapper {
+    height: 885vh;
+  }
+
+  .wrapper {
+    top: 80px;
+  }
+
+  .prev,
+  .next {
+    top: 40%;
+  }
+
+  .transition {
+    height: 20px;
+    display: none;
+  }
+
+  .transitionDaerah {
+    top: 0px;
+  }
+
+  .space {
+    height: 5px;
+  }
+
+  .button {
+    top: 37%;
+  }
+
+  .section1 {
+    transition: all 1s ease;
+    /* transition: all 1s ease; */
+  }
+
+  .section1 > img {
+    /* width: 35%; */
+    /* height: 26vh; */
+    transition: all 1s ease;
+  }
+
+  .section2,
+  .section3,
+  .section4 {
+    height: auto;
+  }
+
+  .section5 > .title {
+    height: 130vh;
+    font-size: 40px;
+  }
+
+  .section5 {
+    background-position: center;
+  }
+
+  .parent-text-daerah {
+    height: auto;
+    /* align-items: flex-st; */
+  }
+
+  .parent-text-daerah > .text-daerah {
+    max-width: 70%;
+    height: auto;
+  }
+
+  .detailDaerah {
+    width: 100%;
+    /* display: block; */
+  }
+
+  /* .section2{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50vh;
+  }
+
+  */
+  .mainContent {
+    flex-direction: column;
+  }
+
+  .textContent {
+    z-index: 1;
+    margin-left: 45px;
+  }
+
+  .textContent2 {
+    margin-right: 0px;
+  }
+
+  .titleTarian {
+    position: relative;
+    font-size: 30px;
+    left: -15px;
+    top: 10px;
+  }
+
+  .titleMakanan {
+    font-size: 60px;
+  }
+
+  .descTarian {
+    margin-left: 8%;
+  }
+
+  .descMakanan {
+    margin-right: 10%;
+  }
+
+  /* .imgMakanan{
+    width: 70%;
+  } */
+
+  #imgSection {
+    position: relative;
+    width: 50%;
+    z-index: 2;
+  }
+
+  #titleContent {
+    position: relative;
+    left: -35px;
+    top: 10px;
+    font-size: 30px;
+  }
+
+  /*   .title{
+    height: 730px;
+  } */
+
+  #desc {
+    /* display: none; */
+    width: auto;
+    margin: 5%;
+    font-size: 15px;
+  }
+
+  .ContactUs {
+    display: none;
+  }
+
+  footer.footer {
+    height: 213vh;
+  }
+
+  .wrapperMainFooter {
+    height: 100%;
+  }
+
+  .aksaraSantara {
+    height: auto;
+    padding-inline: 2em;
+    bottom: 30px;
+  }
+
+  .aksaraSantara > img {
+    height: auto;
+  }
+
+  .aksaraSantara > p {
+    font-size: 15px;
+  }
+
+  .mainfooter {
+    flex-direction: column;
+  }
+
+  .logoAksara {
+    width: 40%;
+  }
+  .Comment,
+  .contactUs {
+    height: 40%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  .bottom-footer {
+    bottom: 200px;
+  }
+}
