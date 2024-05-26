@@ -17,6 +17,7 @@ const elements = {
   descPakaian: select(".descPakaian"),
   descTarian: select(".descTarian"),
   descMakanan: select(".descMakanan"),
+  flag: "THPCTF{4kSar45an74ra_6r0wD3v}"
 };
 
 let valueTextD = [];
