@@ -17,7 +17,6 @@ const elements = {
   descPakaian: select(".descPakaian"),
   descTarian: select(".descTarian"),
   descMakanan: select(".descMakanan"),
-  flag: "THPCTF{4kSar45an74ra_6r0wD3v}"
 };
 
 let valueTextD = [];
@@ -86,6 +85,7 @@ const handleScroll = () => {
   elements.detailDaerah.style.display = isPast3500 ? "block" : "";
   elements.textDaerah.innerHTML = isPast2500
     ? "Scroll down to surface <br/><i class='fa fa-chevron-down' aria-hidden='true'></i>"
+    //"THPCTF{4kSar45an74ra_6r0wD3v}"
     : `${dataDaerah[currentIndex][2]}`;
   elements.textDaerah.style.maxWidth = isPast2500 ? "100%" : "";
 
